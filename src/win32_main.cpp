@@ -55,7 +55,7 @@ WinMain(HINSTANCE curInst,
 	WNDCLASS MainWnd = {};
 	MainWnd.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
 	MainWnd.lpfnWndProc;
-	MainWnd.hInstance = hInstance;
+	MainWnd.hInstance = curInst;
 	MainWnd.lpszClassName = "MainWndClass";
 	
 	// unused properties
