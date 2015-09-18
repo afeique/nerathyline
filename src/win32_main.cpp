@@ -70,6 +70,9 @@ WinMain(HINSTANCE curInst,
 		"This is a test", 
 		"Nerathyline", 
 		MB_OK|MB_ICONINFORMATION);
+
+	RegisterClass(MainWnd);
+
 	return(0);
 }
 
