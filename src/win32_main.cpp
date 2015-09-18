@@ -1,11 +1,74 @@
 #include <windows.h>
 
-int CALLBACK 
-WinMain(HINSTANCE 	hInstance,
-		HINSTANCE 	hPrevInstance,
-		LPSTR		lpCmdLine,
-		int 		nCmdShow) 
+LRESULT CALLBACK 
+MainWindowProc(HWND   wnd,
+  			   UINT   msg,
+  			   WPARAM wParam,
+			   LPARAM lParam)
 {
+
+	// assume we handle all messages by default
+	LRESULT retval = 0;
+
+	switch (msg) 
+	{
+		case WM_SIZE: 
+		{
+			OutputDebugStringAA("WM_SIZE\n");
+		} break;
+
+		case WM_DESTROY:
+		{
+			OutputDebugStringA("WM_DESTROY\n");
+
+		} break;
+
+		case WM_CLOSE:
+		{
+			OutputDebugStringA("WM_CLOSE\n");
+
+		} break;
+
+		case WM_ACTIVATEAPP:
+		{
+			OutputDebugStringA("WM_ACTIVATEAPP\n");
+
+		} break;
+
+		default:
+		{
+			retval = ;
+
+		} break;
+	}
+
+	return(retval);
+}
+
+int CALLBACK 
+WinMain(HINSTANCE curInst,
+		HINSTANCE prvInst,
+		LPSTR cmd,
+		int showCmd) 
+{
+	WNDCLASS MainWnd = {};
+	MainWnd.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
+	MainWnd.lpfnWndProc;
+	MainWnd.hInstance = hInstance;
+	MainWnd.lpszClassName = "MainWndClass";
+	
+	// unused properties
+	// MainWnd.cbClsExtra;
+	// MainWnd.cbWndExtra;
+	// MainWnd.hIcon;
+	// MainWnd.hCursor;
+	// MainWnd.hbrBackground;
+	// MainWnd.lpszMenuName;
+
+	MessageBoxA(NULL, 
+		"This is a test", 
+		"Nerathyline", 
+		MB_OK|MB_ICONINFORMATION);
 	return(0);
 }
 
