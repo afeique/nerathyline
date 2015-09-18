@@ -14,7 +14,7 @@ MainWindowProc(HWND   wnd,
 	{
 		case WM_SIZE: 
 		{
-			OutputDebugStringAA("WM_SIZE\n");
+			OutputDebugStringA("WM_SIZE\n");
 		} break;
 
 		case WM_DESTROY:
@@ -37,7 +37,8 @@ MainWindowProc(HWND   wnd,
 
 		default:
 		{
-			retval = ;
+			// default window proc return
+			retval = DefWindowProc(wnd, msg, wParam, lParam);
 
 		} break;
 	}
