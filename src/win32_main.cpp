@@ -1,11 +1,12 @@
 #include <windows.h>
 
 LRESULT CALLBACK 
-MainWindowProc(HWND   wnd,
-  			   UINT   msg,
-  			   WPARAM wParam,
-			   LPARAM lParam)
-{
+MainWndCallback(
+	HWND   wnd,
+	UINT   msg,
+	WPARAM wParam,	
+	LPARAM lParam
+) {
 
 	// assume we handle all messages by default
 	LRESULT retval = 0;
@@ -47,31 +48,74 @@ MainWindowProc(HWND   wnd,
 }
 
 int CALLBACK 
-WinMain(HINSTANCE curInst,
-		HINSTANCE prvInst,
-		LPSTR cmd,
-		int showCmd) 
-{
-	WNDCLASS MainWnd = {};
-	MainWnd.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
-	MainWnd.lpfnWndProc;
-	MainWnd.hInstance = curInst;
-	MainWnd.lpszClassName = "MainWndClass";
+WinMain(
+	HINSTANCE hCurInst,
+	HINSTANCE hPrevInst,
+	LPSTR cmd,
+	int showCmd
+) {
+	WNDCLASS cMainWnd = {};
+	cMainWnd.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
+	cMainWnd.lpfnWndProc = MainWndCallback;
+	cMainWnd.hInstance = hCurInst;
+	cMainWnd.lpszClassName = "NerathylineWndClass";
 	
 	// unused properties
-	// MainWnd.cbClsExtra;
-	// MainWnd.cbWndExtra;
-	// MainWnd.hIcon;
-	// MainWnd.hCursor;
-	// MainWnd.hbrBackground;
-	// MainWnd.lpszMenuName;
+	// cMainWnd.cbClsExtra;
+	// cMainWnd.cbWndExtra;
+	// cMainWnd.hIcon;
+	// cMainWnd.hCursor;
+	// cMainWnd.hbrBackground;
+	// cMainWnd.lpszMenuName;
 
-	MessageBoxA(NULL, 
-		"This is a test", 
-		"Nerathyline", 
-		MB_OK|MB_ICONINFORMATION);
+	// MessageBoxA(
+	// 	0, 
+	// 	"This is a test", 
+	// 	"Nerathyline", 
+	// 	MB_OK|MB_ICONINFORMATION
+	// );
 
-	RegisterClass(MainWnd);
+	if (RegisterClass(&cMainWnd))
+	{
+		HWND hWnd = CreateWindowEx(
+			0, 
+			cMainWnd.lpszClassName,
+			"Nerathyline",
+			WS_OVERLAPPEDWINDOW|WS_VISIBLE,
+			CW_USEDEFAULT,
+			CW_USEDEFAULT,
+			CW_USEDEFAULT,
+			CW_USEDEFAULT,
+			0,
+			0,
+			hCurInst,
+			0
+		);
+
+		if (hWnd)
+		{
+			MSG msg;
+			BOOL msgRet;
+			while ( (msgRet = GetMessage(&msg, hWnd, 0, 0)) != 0 )
+			{
+				if (msgRet == -1)
+				{
+					// hWnd is an invalid param
+					// chaos, destruction, etc.
+					break;
+				} 
+				else
+				{
+					TranslateMessage(&msg);
+					DispatchMessage(&msg);
+				}
+			}
+		}
+		else
+		{
+
+		}
+	}
 
 	return(0);
 }
