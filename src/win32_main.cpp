@@ -1,7 +1,7 @@
 #include <windows.h>
 
-#define static persist;
-#define static global;
+#define persist static;
+#define global static;
 
 static bool running;
 
@@ -36,13 +36,14 @@ MainWndCallback(
 		case WM_DESTROY:
 		{
 			running = false;
-
+			PostQuitMessage(0);
 			OutputDebugStringA("WM_DESTROY\n");
 		} break;
 
 		case WM_CLOSE:
 		{
 			running = false;
+			PostQuitMessage(0);
 			OutputDebugStringA("WM_CLOSE\n");
 		} break;
 
