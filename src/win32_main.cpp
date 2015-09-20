@@ -1,5 +1,10 @@
 #include <windows.h>
 
+#define static persist;
+#define static global;
+
+static bool running;
+
 LRESULT CALLBACK 
 MainWndCallback(
 	HWND   wnd,
@@ -18,22 +23,48 @@ MainWndCallback(
 			OutputDebugStringA("WM_SIZE\n");
 		} break;
 
+		case WM_MOVE:
+		{
+			OutputDebugStringA("WM_MOVE\n");
+		} break;
+
+		case WM_MOVING:
+		{
+			OutputDebugStringA("WM_MOVING\n");
+		} break;
+
 		case WM_DESTROY:
 		{
-			OutputDebugStringA("WM_DESTROY\n");
+			running = false;
 
+			OutputDebugStringA("WM_DESTROY\n");
 		} break;
 
 		case WM_CLOSE:
 		{
+			running = false;
 			OutputDebugStringA("WM_CLOSE\n");
-
 		} break;
 
 		case WM_ACTIVATEAPP:
 		{
 			OutputDebugStringA("WM_ACTIVATEAPP\n");
 
+		} break;
+
+		case WM_PAINT:
+		{
+			PAINTSTRUCT paint;
+			HDC devcxt = BeginPaint(wnd, &paint);
+			LONG wndW = paint.rcPaint.right-paint.rcPaint.left;
+			LONG wndH = paint.rcPaint.bottom-paint.rcPaint.top;
+			PatBlt(
+				devcxt, 
+				paint.rcPaint.left, paint.rcPaint.top, 
+				wndW, wndH, 
+				WHITENESS
+			);
+			EndPaint(wnd, &paint);
 		} break;
 
 		default:
@@ -96,6 +127,7 @@ WinMain(
 		{
 			MSG msg;
 			BOOL msgRet;
+			running = true;
 			while ( (msgRet = GetMessage(&msg, hWnd, 0, 0)) != 0 )
 			{
 				if (msgRet == -1)
