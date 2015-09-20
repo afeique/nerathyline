@@ -39,7 +39,7 @@ RemoveNotes:False
 OutlineNotes:True
 ShowMargins:False
 ShowLineNumbers:False
-Cursor/Line:38
+Cursor/Line:14
 Cursor/Column:0
 String/MoreDialogue:(MORE)
 String/ContinuedPageEnd:(CONTINUED)
@@ -174,44 +174,18 @@ Words:0
 #Header-String 1,0,r,,${PAGE}.
 #Header-Empty-Lines 1
 #Start-Script 
-.\Black. The gentle drone of insects.
-./FADE IN:
-.\EXT. - luzcielo - night
-..Thom Crestler walks down the street.
-./FADE TO BLACK
-.\Ethereal eyes shrouded by shadows stare at the player.
-.\Ext. - paradyme basin - night
-.=Pan: 
-..Thom Crestler's corpse.
-./FADE TO BLACK
-./FADE IN:
-.\EXT. - LUZCIELO - DAY
->.An agitated SYLVIA CRESTLER paces back and forth at the
->.entrance to LUZCIELO. A kind passerby named ERATHIUS
-..LAVERNYNE stops to see what is the matter.
-._ERATHIUS LAVERNYNE
-.:What's the matter, ma'am?
-._Sylvia Crestler
->:My husband hasn't returned home
-.:since two nights ago...
-._Erathius lavernyne
->:I'm... Terribly sorry to hear that.
-.:What's his name?
-._SYLVIA CRESTLER
->:Thom. Thom Crestler. Here, this is
->:a picture of me and him from just a
-.:year ago.
->=Show: picture of thom and sylvia with eerie shadow in the
-.=background
-./FADE TO BLACK
-.\EXT. - Luzcielo - day
-..TEXT: Three days later.
->.A masked stranger garbed in dark armor and wielding a black
-..sword walks into town.
-./CROSSFADE:
-.\Ext. - day - luzcielo cemetery
->.The masked stranger approaches ERATHIUS and SYLVIA at THOM's
-..funeral.
-..
-..
-..
+.\Int. - severyn's house - night
+>.Tossing and turning in bed is a young man. This is SEVERYN
+..SOLITUS.
+._Voice
+.((grand mysterious music)
+>:Thou who beareth true wisdom...
+>:Doubtless, thou art conscious of
+.:the dire peril facing our land.
+>.Pictures of burning towns, hurricanes, and terrifying beasts
+..flash across the screen as SEVERYN turns in his bed.
+._VOICE
+>:When thou art prepared, make thy
+.:way, skyward bound.
+._
+.:
