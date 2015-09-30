@@ -39,8 +39,8 @@ RemoveNotes:False
 OutlineNotes:True
 ShowMargins:False
 ShowLineNumbers:False
-Cursor/Line:75
-Cursor/Column:0
+Cursor/Line:65
+Cursor/Column:55
 String/MoreDialogue:(MORE)
 String/ContinuedPageEnd:(CONTINUED)
 String/ContinuedPageStart:CONTINUED:
@@ -207,35 +207,30 @@ Words:0
 .\Int. - solitus household - 1st floor - day
 ._Mom
 .((at stovetop)
->:Severyn, sweetie, happy birthday! I
->:made you your favorite blueberry
-.:pancakes.
-._Mom
->:Your father also called while you
-.:were asleep to wish you the best.
-._MOM
->:He's sorry he had to go overseas on
-.:business with such poor timing.
+>:Happy birthday, sweetie! I made you
+.:your favorite blueberry pancakes
 ..(optional) Severyn eats pancakes.
 ._
 >:Mom's delicious homemade blueberry
-.:pancakes! SP rejuvenated!
+.:pancakes! You feel warm and happy!
 ..Severyn leaves.
 ..------------------------------------------------------------
 ..Case "Didn't eat pancakes":
 ._MOM
->:Aren't you going to eat, dear? Well
+>:Aren't you going to eat, Sevy? Well
 .:okay, come back if you get hungry.
 ._ERATHIUS
 >:More for me, yay! Thanks big
 .:brother!
+._MOM
+.:Don't overeat, Ery-dear!
 ..------------------------------------------------------------
 ._MOM
->:Oh, I almost forgot, but your
-.:friend from next door stopped by...
+>:I almost forgot, but your friend
+.:from next door stopped by...
 ..Input friend's name, default "Elise".
 ._MOM
->:Ellis said you should stop by her
+>:Elise said you should stop by her
 .:place after you wake up.
 ._MOM
 >:She probably wants to wish you a
@@ -244,7 +239,8 @@ Words:0
 .:Maybe she has a present for you?
 ..Severyn leaves his house.
 .\Ext. - luzcielo - day
-..Severyn walks to LAVERNYNE HOUSEHOLD (ELISE'S HOUSE).
+>.Severyn walks next door to LAVERNYNE HOUSEHOLD (ELISE'S
+..HOUSE).
 .\INT. - LAVERNYNE HOUSEHOLD - 1st floor - day
 >.Working in the kitchen is Elise's mother, NEPHELE LAVERNYNE.
 >.Sitting on a chair in the dining area with a newspaper
