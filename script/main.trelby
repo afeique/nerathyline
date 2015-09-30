@@ -40,7 +40,7 @@ OutlineNotes:True
 ShowMargins:False
 ShowLineNumbers:False
 Cursor/Line:75
-Cursor/Column:8
+Cursor/Column:0
 String/MoreDialogue:(MORE)
 String/ContinuedPageEnd:(CONTINUED)
 String/ContinuedPageStart:CONTINUED:
@@ -174,34 +174,9 @@ Words:0
 #Header-String 1,0,r,,${PAGE}.
 #Header-Empty-Lines 1
 #Start-Script 
-.\Int. - severyn's room - night
->.Tossing and turning in bed is a young man. This is SEVERYN
-..SOLITUS.
-..[Mysterious grand music plays]
-._Voice
->:Thou who beareth wisdom... I am
->:Nethalyu, one of the many Keepers
-.:of this world.
-._Nethalyu
->:Doubtless, thou art conscious of
->:the creeping perils facing this
-.:land...
->.Pictures of burning towns, hurricanes, and terrifying beasts
-..flash across the screen as Severyn turns in his bed.
-._NETHALYU
->:When thou art prepared to lay thy
->:life down, make thy way skyward
-.:bound.
-._NETHALYU
-.:@#$&$%*&$@#@%^$%@^----zzzzz
-._NETHALYU
->:Gah. I hate talking in that old
-.:timey voice.
-._Other voice
-.:Shhh! The CAT's still on!
-._NETHALYU
-.:What? Stupid butt- *click*
-.\INT. - SEVERYN'S room - day
+.\INT. - SOLitus household - SEVERYN'S room - day
+>.A young man is sleeping in bed. This is the lead
+..protagonist, SEVERYN SOLITUS.
 >.A little boy runs into the room energetically. He is
 >.Severyn's younger brother. This is ERATHIUS SOLITUS. He is
 ..followed by a hywolf pup. This is SERATHANOS.
@@ -210,78 +185,68 @@ Words:0
 .:Wake up!!
 ._SERATHANOS
 .((chasing ERATHIUS)
-.:Woof!
+.((Woof!)
 ._ERATHIUS
 .((stops at bedside)
 .:Wake up, Severyn!!
 ._ERATHIUS
-.((continuing)
 >:Did you already forget what day it
 .:is?
 ._ERATHIUS
-.((continuing)
 .:It's your birthday~!
 ._SERATHANOS
-.:*barks excitedly*
+.((Bark!)
 ..Severyn finally gets out of bed.
 ._ERATHIUS
 >:Mom made blueberry pancakes. You
->:better hurry up, or I'll eat all of
-.:yours!
+>:better hurry up, or I'll eat your
+.:share!
 >.Erathius runs out of Severyn's room followed closely by
 ..Serathanos.
-._NETHALYU
->:Sheesh. What an annoying kid. I
->:can't believe the two of them are
-.:related.
-..Severyn looks around.
-._OTHER VOICE
-.:It looks like he can hear you!
-..Severyn gets up and looks under bed.
-._NETHALYU
-.:What? You can hear me?
-..------------------------------------------------------------
-..Case "YES":
-._NETHALYU
-.:... Well, this is embarassing. 
-..Case "NO":
-._NETHALYU
->:... I'm not stupid. You just
-.:responded to my question.
-..Case "IGNORE"
-._NETHALYU
->:... Are you seriously ignoring me?
-.:Look, I know you can hear me.
-..------------------------------------------------------------
-._NETHALYU
->:It seems my CAT is having some
-.:issues.
-._NEThALYU
->:That stands for "Cerebral Audio
-.:Transponder" by the way. 
-._NETHALYU
->:It allows me to feed audio directly
->:into your pre-warp civilization
-.:brain.
-._OTHER VOICE
->:Captain, you're breaking the First
-.:Commandment!
-._NETHALYU
->:You mean the Prime Directive, you
-.:twit.
-._OTHER VOICE
-.:Yes, yes, that one!
-._NETHALYU
->:You've been watching too many
->:reruns. Our Prime Directive is to
-.:help and guide!
-._OTHER VOICE
->:Oooh, goody! I'll help by baking
-.:some cookies!
-._NETHALYU
->:If you need my advice, hop on one
-.:leg while crowing like a rooster.
-._NETHALYU
->:Just kidding! I'll only help you
-.:when I feel like it. Bye! *click*
+..Severyn gets out of bed and goes downstairs.
+.\Int. - solitus household - 1st floor - day
+._Mom
+.((at stovetop)
+>:Severyn, sweetie, happy birthday! I
+>:made you your favorite blueberry
+.:pancakes.
+._Mom
+>:Your father also called while you
+.:were asleep to wish you the best.
+._MOM
+>:He's sorry he had to go overseas on
+.:business with such poor timing.
+..(optional) Severyn eats pancakes.
 ._
+>:Mom's delicious homemade blueberry
+.:pancakes! SP rejuvenated!
+..Severyn leaves.
+..------------------------------------------------------------
+..Case "Didn't eat pancakes":
+._MOM
+>:Aren't you going to eat, dear? Well
+.:okay, come back if you get hungry.
+._ERATHIUS
+>:More for me, yay! Thanks big
+.:brother!
+..------------------------------------------------------------
+._MOM
+>:Oh, I almost forgot, but your
+.:friend from next door stopped by...
+..Input friend's name, default "Elise".
+._MOM
+>:Ellis said you should stop by her
+.:place after you wake up.
+._MOM
+>:She probably wants to wish you a
+.:happy birthday...
+._MOM
+.:Maybe she has a present for you?
+..Severyn leaves his house.
+.\Ext. - luzcielo - day
+..Severyn walks to LAVERNYNE HOUSEHOLD (ELISE'S HOUSE).
+.\INT. - LAVERNYNE HOUSEHOLD - 1st floor - day
+>.Working in the kitchen is Elise's mother, NEPHELE LAVERNYNE.
+>.Sitting on a chair in the dining area with a newspaper
+..spread out before him is Elise's father, ATHAMAS LAVERNYNE.
+..
